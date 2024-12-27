@@ -36,7 +36,7 @@ public class CalculatorUI extends javax.swing.JFrame {
         jButton11 = new javax.swing.JButton();
         jButton13 = new javax.swing.JButton();
         jButton12 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
+        jtxtResult = new javax.swing.JTextField();
         jButtonInt3 = new javax.swing.JButton();
         jButtonInt1 = new javax.swing.JButton();
         jButtonInt2 = new javax.swing.JButton();
@@ -78,8 +78,13 @@ public class CalculatorUI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jTextField1.setFont(new java.awt.Font("Myanmar Text", 1, 12)); // NOI18N
-        jTextField1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jtxtResult.setFont(new java.awt.Font("Myanmar Text", 1, 24)); // NOI18N
+        jtxtResult.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jtxtResult.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtxtResultActionPerformed(evt);
+            }
+        });
 
         jButtonInt3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jButtonInt3.setText("3");
@@ -216,7 +221,7 @@ public class CalculatorUI extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jtxtResult, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButtonInt0, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -258,7 +263,7 @@ public class CalculatorUI extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jtxtResult, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonInt1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -289,48 +294,64 @@ public class CalculatorUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    
+    private void InputNums(String i){
+        String Nums = jtxtResult.getText() + i;
+        jtxtResult.setText(Nums);
+    }
     private void jButtonInt1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonInt1ActionPerformed
         // TODO add your handling code here:
+        InputNums("1");
     }//GEN-LAST:event_jButtonInt1ActionPerformed
 
     private void jButtonInt3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonInt3ActionPerformed
         // TODO add your handling code here:
+        InputNums("3");
     }//GEN-LAST:event_jButtonInt3ActionPerformed
 
     private void jButtonInt2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonInt2ActionPerformed
         // TODO add your handling code here:
+        InputNums("2");
     }//GEN-LAST:event_jButtonInt2ActionPerformed
 
     private void jButtonInt6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonInt6ActionPerformed
         // TODO add your handling code here:
+        InputNums("6");
     }//GEN-LAST:event_jButtonInt6ActionPerformed
 
     private void jButtonInt4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonInt4ActionPerformed
         // TODO add your handling code here:
+        InputNums("4");
     }//GEN-LAST:event_jButtonInt4ActionPerformed
 
     private void jButtonInt5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonInt5ActionPerformed
         // TODO add your handling code here:
+        InputNums("5");
     }//GEN-LAST:event_jButtonInt5ActionPerformed
 
     private void jButtonInt9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonInt9ActionPerformed
         // TODO add your handling code here:
+        InputNums("9");
     }//GEN-LAST:event_jButtonInt9ActionPerformed
 
     private void jButtonInt7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonInt7ActionPerformed
         // TODO add your handling code here:
+        InputNums("7");
     }//GEN-LAST:event_jButtonInt7ActionPerformed
 
     private void jButtonInt8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonInt8ActionPerformed
         // TODO add your handling code here:
+        InputNums("8");
     }//GEN-LAST:event_jButtonInt8ActionPerformed
 
     private void jButtonESCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonESCActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_jButtonESCActionPerformed
 
     private void jButtonInt0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonInt0ActionPerformed
         // TODO add your handling code here:
+        InputNums("0");
     }//GEN-LAST:event_jButtonInt0ActionPerformed
 
     private void jButtonEqualsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEqualsActionPerformed
@@ -352,6 +373,10 @@ public class CalculatorUI extends javax.swing.JFrame {
     private void jButtonSubtractionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSubtractionActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonSubtractionActionPerformed
+
+    private void jtxtResultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtResultActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtxtResultActionPerformed
 
     /**
      * @param args the command line arguments
@@ -416,6 +441,6 @@ public class CalculatorUI extends javax.swing.JFrame {
     private javax.swing.JButton jButtonInt9;
     private javax.swing.JButton jButtonMultiplication;
     private javax.swing.JButton jButtonSubtraction;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jtxtResult;
     // End of variables declaration//GEN-END:variables
 }
