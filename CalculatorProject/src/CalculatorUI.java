@@ -12,6 +12,12 @@ public class CalculatorUI extends javax.swing.JFrame {
     /**
      * Creates new form CalculatorUI
      */
+    
+    double num1;
+    double num2;
+    double result;
+    String OP;
+    
     public CalculatorUI() {
         initComponents();
     }
@@ -299,6 +305,9 @@ public class CalculatorUI extends javax.swing.JFrame {
         String Nums = jtxtResult.getText() + i;
         jtxtResult.setText(Nums);
     }
+    
+
+    
     private void jButtonInt1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonInt1ActionPerformed
         // TODO add your handling code here:
         InputNums("1");
@@ -346,6 +355,14 @@ public class CalculatorUI extends javax.swing.JFrame {
 
     private void jButtonESCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonESCActionPerformed
         // TODO add your handling code here:
+        jtxtResult.setText("");
+        String fn, sn;
+        
+        fn = String.valueOf(num1);
+        sn = String.valueOf(num2);
+        
+        fn = "";
+        sn = "";
         
     }//GEN-LAST:event_jButtonESCActionPerformed
 
@@ -356,22 +373,56 @@ public class CalculatorUI extends javax.swing.JFrame {
 
     private void jButtonEqualsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEqualsActionPerformed
         // TODO add your handling code here:
+        num2 = Double.parseDouble(jtxtResult.getText());
+        
+        if(OP == "+"){
+            result = num1 + num2;
+            jtxtResult.setText(String.valueOf(result));
+        }
+        else if(OP == "-"){
+            result = num1 - num2;
+            jtxtResult.setText(String.valueOf(result));
+        }
+        else if(OP == "x"){
+            result = num1 * num2;
+            jtxtResult.setText(String.valueOf(result));
+        }
+        else if(OP == "÷"){
+            result = num1 / num2;
+            jtxtResult.setText(String.valueOf(result));
+        }
     }//GEN-LAST:event_jButtonEqualsActionPerformed
 
     private void jButtonMultiplicationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMultiplicationActionPerformed
         // TODO add your handling code here:
+        num1 = Double.parseDouble(jtxtResult.getText());
+        jtxtResult.setText("");
+        
+        OP = "x";
     }//GEN-LAST:event_jButtonMultiplicationActionPerformed
 
     private void jButtonDivisionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDivisionActionPerformed
         // TODO add your handling code here:
+        num1 = Double.parseDouble(jtxtResult.getText());
+        jtxtResult.setText("");
+        
+        OP = "÷";
     }//GEN-LAST:event_jButtonDivisionActionPerformed
 
     private void jButtonAdditionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAdditionActionPerformed
         // TODO add your handling code here:
+        num1 = Double.parseDouble(jtxtResult.getText());
+        jtxtResult.setText("");
+        
+        OP = "+";
     }//GEN-LAST:event_jButtonAdditionActionPerformed
 
     private void jButtonSubtractionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSubtractionActionPerformed
         // TODO add your handling code here:
+        num1 = Double.parseDouble(jtxtResult.getText());
+        jtxtResult.setText("");
+        
+        OP = "-";
     }//GEN-LAST:event_jButtonSubtractionActionPerformed
 
     private void jtxtResultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtResultActionPerformed
